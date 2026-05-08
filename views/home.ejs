@@ -1,0 +1,84 @@
+export default function FitnessNutritionWebsite() {
+  const workouts = [
+    {
+      title: 'Strength Training',
+      description: 'Build muscle and increase overall strength with guided workouts.',
+    },
+    {
+      title: 'Weight Loss',
+      description: 'Burn calories and stay active with high-energy routines.',
+    },
+    {
+      title: 'Nutrition Plans',
+      description: 'Healthy meal ideas and balanced nutrition tips for every goal.',
+    },
+  ];
+
+  const meals = [
+    'High-Protein Breakfast Bowl',
+    'Grilled Chicken Salad',
+    'Healthy Smoothie Recipes',
+    'Low-Calorie Dinner Ideas',
+  ];
+
+  return (
+    <div className="min-h-screen bg-gray-100 text-gray-900 font-sans">
+      {/* Hero Section */}
+      <section className="bg-black text-white py-20 px-6 text-center">
+        <h1 className="text-5xl font-bold mb-4">FitLife</h1>
+        <p className="text-lg max-w-2xl mx-auto mb-6">
+          Your all-in-one fitness and nutrition platform designed to help you
+          train smarter, eat healthier, and reach your goals.
+        </p>
+        <button className="bg-white text-black px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition">
+          Start Your Journey
+        </button>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 px-6 max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-10">
+          Fitness Programs
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {workouts.map((workout, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition"
+            >
+              <h3 className="text-2xl font-semibold mb-3">{workout.title}</h3>
+              <p className="text-gray-600">{workout.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Nutrition Section */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 className="text-3xl font-bold mb-4">Healthy Nutrition</h2>
+            <p className="text-gray-600 mb-6">
+              Nutrition is just as important as exercise. Explore healthy meal
+              ideas, calorie-friendly recipes, and meal plans built for your
+              lifestyle.
+            </p>
+
+            <ul className="space-y-3">
+              {meals.map((meal, index) => (
+                <li
+                  key={index}
+                  className="bg-gray-100 p-3 rounded-xl shadow-sm"
+                >
+                  {meal}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="bg-gray-200 h-80 rounded-3xl flex items-center justify-center text-gray-500 text-xl font-semibold">
+            Fitness Image Placeholder
+          </div>
+        </div>
+}
