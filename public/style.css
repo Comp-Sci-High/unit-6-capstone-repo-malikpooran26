@@ -1,0 +1,225 @@
+/* FitLife Blue Theme */
+
+:root {
+  --background: #e7f1ff;
+  --surface: #ffffff;
+  --surface-strong: #d0e4ff;
+  --text: #0f2a4b;
+  --text-muted: #4f6f94;
+  --primary: #1d5eff;
+  --primary-dark: #153fb3;
+  --accent: #1a6bff;
+  --border: #c5d7f7;
+  --shadow: 0 18px 35px rgba(15, 42, 75, 0.08);
+  --radius: 1.25rem;
+  --transition: all 0.25s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #f2f8ff 0%, #e7f1ff 60%, #d7e8ff 100%);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+.btn,
+a.button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.95rem 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button:hover,
+.btn:hover,
+a.button:hover {
+  transform: translateY(-2px);
+}
+
+nav {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(29, 94, 255, 0.12);
+  color: var(--text);
+  padding: 1rem 1.5rem;
+}
+
+nav .container {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav h1 {
+  font-size: 1.6rem;
+  letter-spacing: -0.03em;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+.hero {
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.hero .container {
+  max-width: 56rem;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(29, 94, 255, 0.14);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 3.5rem 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 5vw, 4.25rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #0d2140;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  margin: 0 auto 1.8rem;
+  max-width: 41rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: var(--surface-strong);
+  color: var(--text);
+  box-shadow: inset 0 0 0 1px rgba(29, 94, 255, 0.16);
+}
+
+.section {
+  padding: 4rem 1.5rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #173563;
+}
+
+.section p {
+  color: var(--text-muted);
+  max-width: 60ch;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid rgba(29, 94, 255, 0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.75rem;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(29, 94, 255, 0.22);
+}
+
+.card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  color: #153a72;
+}
+
+.card p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.card small {
+  display: inline-block;
+  color: #5a7ca9;
+}
+
+.card.accent {
+  background: linear-gradient(180deg, rgba(29, 94, 255, 0.08), rgba(17, 85, 255, 0.02));
+}
+
+footer {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  nav .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero .container {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
